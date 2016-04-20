@@ -1,0 +1,10 @@
+<h2>{{player.name}} {{player.surname}}</h2>
+<p>Age: {{player.age}}</p>
+<p>Position: {{player-position player.position}} - {{player.position}}</p>
+<p>Nationality: {{player.nationality}}</p>
+{{#if isImageShowing}}
+    <button {{action "imageHide"}}>Hide image</button>
+    <img src="{{ player.image}}" alt="">
+{{else}}
+    <button {{action "imageShow"}} >Show image</button>
+{{/if}}

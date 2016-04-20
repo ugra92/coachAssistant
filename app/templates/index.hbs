@@ -1,0 +1,18 @@
+{{outlet}}
+{{#link-to "index"}}Homepage{{/link-to}}
+{{#link-to "add-player"}}Add Player{{/link-to}}
+
+
+{{search-player-listing filteredList=filteredList
+autoComplete=(action 'autoComplete') search=(action 'search')}}
+{{#each model as |rentalUnit|}}
+    {{search-player-listing player=player}}
+{{/each}}
+
+
+
+<h3>Players: </h3>
+
+{{#each model as |player|}}
+{{player-listing player = player}}
+{{/each}}
